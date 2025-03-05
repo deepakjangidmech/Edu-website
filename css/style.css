@@ -171,3 +171,47 @@ form button:hover {
         font-size: 20px;
     }
 }
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.course {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.course h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.course p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.course a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.course a:hover {
+    background: #0056b3;
+}

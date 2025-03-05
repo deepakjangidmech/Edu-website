@@ -1,3 +1,4 @@
+alert("courses.js is running!");
 document.addEventListener("DOMContentLoaded", function () {
     const courses = [
         {
