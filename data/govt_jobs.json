@@ -1,18 +1,40 @@
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+{
+    "SSC": [
+        {
+            "title": "SSC CGL 2025",
+            "description": "Combined Graduate Level Exam - Apply Now!",
+            "apply_link": "#"
+        },
+        {
+            "title": "SSC CHSL 2025",
+            "description": "Higher Secondary Level Exam - Apply Online.",
+            "apply_link": "#"
+        }
+    ],
+    "Banking": [
+        {
+            "title": "SBI Clerk Recruitment 2025",
+            "description": "Apply for SBI Clerk positions before the deadline.",
+            "apply_link": "#"
+        },
+        {
+            "title": "IBPS PO 2025",
+            "description": "Institute of Banking Personnel Selection - Apply Now!",
+            "apply_link": "#"
+        }
+    ],
+    "UPSC": [
+        {
+            "title": "UPSC Civil Services 2025",
+            "description": "IAS, IPS, IFS Exam - Official Notification Released.",
+            "apply_link": "#"
+        }
+    ],
+    "Railways": [
+        {
+            "title": "RRB NTPC 2025",
+            "description": "Non-Technical Popular Categories - Apply Now!",
+            "apply_link": "#"
+        }
+    ]
 }
-
-// Show the first tab by default
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".tablink").click();
-});
