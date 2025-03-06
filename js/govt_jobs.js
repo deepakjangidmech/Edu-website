@@ -12,7 +12,32 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Show the first tab by default
+// Fetch Job Listings from JSON
+async function loadJobs() {
+    try {
+        const response = await fetch("data/govt_jobs.json");
+        const data = await response.json();
+
+        Object.keys(data).forEach(category => {
+            let jobSection = document.getElementById(category);
+            jobSection.innerHTML = `<h3>${category} Jobs</h3>`;
+            
+            data[category].forEach(job => {
+                jobSection.innerHTML += `
+                    <div class="job">
+                        <h4>${job.title}</h4>
+                        <p>${job.description}</p>
+                        <a href="${job.apply_link}" target="_blank">Apply Now</a>
+                    </div>
+                `;
+            });
+        });
+    } catch (error) {
+        console.error("Error loading jobs:", error);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tablink").click();
+    loadJobs();
 });
